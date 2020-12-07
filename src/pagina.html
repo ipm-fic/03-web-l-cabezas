@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+   <head>
+      <meta charset="UTF-8">
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>PokéPage</title>
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!-- Compiled and minified CSS -->
+      <link href='http://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" type="text/css" href="responsive.css">
+      <!-- Compiled and minified JavaScript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<!--      <script>
+         document.addEventListener('DOMContentLoaded', function() {
+             var elems = document.querySelectorAll('.sidenav');
+             var instances = M.Sidenav.init(elems, {});
+         });
+
+      </script>-->
+   </head>
+   <body>
+      <div id="wrapper" class="container">
+         <header>
+            <nav> <!--class="grey darken-3">-->
+               <div class="nav-wrapper">
+                  <a href="#!" class="info" > PokéInfo </a>
+                  <!--<ul id="nav-mobile" class="right hide-on-med-and-down">
+                     <li><a href="#">Nombre</a></li>
+                     <li><a href="#">Número</a></li>
+                     <li><a href="#">Intervalo</a></li>
+                  </ul>-->
+               </div>
+            </nav>
+         </header>
+         <main>
+            <section>
+               <img src="img/header.png">
+               <h1 class="light-green-text text-darken-2">
+                  En esta página podrás conocer más acerca de los pokémon para ello
+                  tenemos varios tipos de búsqueda
+               </h1>
+
+
+            </section>
+            <section id="zone1">
+               <h2 class="light-green-text text-darken-2">Nombre</h2>
+               <p>
+                 Pon en el buscador el nombre del pokémon!
+               </p>
+
+               <!-- app search page-->
+               <div data-role="page" id="pokeSearch-page">
+                  <div data-role="main" class="ui-content">
+                     <form id="pokeForm" action="#pokeDetails-page" method="post">
+                        <div>
+                           <form>
+                              <label for="pokeInput">Pokémon nombre o número: </label>
+                              <input type="text" name="pokeInput" id="pokeInput" placeholder="Buscar Pokémon" />
+                              <input type="submit" value="Search" />
+                           </form>
+                           <div class="pokemon-container"></div>
+                           <script src="getData.js"></script>
+
+
+                        </div>
+                        <br>
+                     </form>
+                     <div>
+                        <ul data-role="listview" data-inset="true" id="pokeDetails" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">
+
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+
+
+
+
+            </section>
+
+
+
+
+         </main>
+
+
+         <script type="text/javascript">
+
+            document.addEventListener("deviceready", onDeviceReady, true);
+
+            function onDeviceReady() {
+
+            }
+         </script>
+
+
+      </div>
+   </body>
+</html>
