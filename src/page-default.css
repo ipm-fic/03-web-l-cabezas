@@ -1,0 +1,194 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+nav {
+    background-color: #3D7EA6;
+    overflow: hidden;
+    justify-content: space-between;
+    display: block;
+}
+
+body {
+    width: 100%; /* Base page size = 1200 px */
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #5C969E;
+    font-size: 15px; /* Base font-size = 16px */
+    align-self: center;
+    background-color: #FCDADA;
+
+}
+
+header nav div img {
+    max-width: 5%;
+    position: relative;
+    left: 50%;
+    transform: translatex(-50%);
+}
+
+header nav div a{
+    text-decoration: none;
+    font-size: 23px;
+    color: #fff;
+    padding: 0.30em; /* 12px / 16px */
+    display: block;
+    text-align: center;
+    position: relative;
+    left: 50%;
+    transform: translatex(-50%);
+}
+
+
+body main section h1 {
+    margin: 3%;
+}
+
+
+
+
+body main img{
+    padding-top: 2%;
+    max-width: 50%; /* Fluid images! For IE6 support, create a separate IE6 */
+    height: auto;    /* stylesheet and include "img { width: 100%;}"         */
+    padding-bottom: 2%;
+    display: block;
+    text-align: center;
+    position: relative;
+    left: 50%;
+    transform: translatex(-50%);
+
+
+}
+
+main section h1{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 23px;
+    text-align: left;
+    padding-bottom: 3%;
+}
+
+main section h3{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 19px;
+    text-align: left;
+    padding-bottom: 3%;
+}
+
+
+main section div div form div {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 15px;
+    text-align: center;
+    padding-bottom: 2%;
+}
+
+
+main section div div form div div {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 15px;
+    text-align: center;
+    padding-top: 0.5%;
+}
+
+img {
+    max-width: 100%; /* Fluid images! For IE6 support, create a separate IE6 */
+    height: auto;    /* stylesheet and include "img { width: 100%;}"         */
+    align-self: center;
+}
+
+h1{
+    color: #3D7EA6;
+    text-align: center;
+}
+
+h2{
+    margin: 3%;
+    font-size: 19px;
+}
+
+h3{
+    margin: 3%;
+    font-size: 15px;
+}
+
+#pokeDetails-page {
+    left: 50%;
+    transform: translatex(-50%);
+}
+
+input[type=text] {
+    background-color:white;
+    border: black;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    border: 2px solid black;
+    border-radius: 4px;
+}
+
+
+input[type=submit] {
+    background-color: #FFA5A5;
+    border: black;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    border: 2px solid black;
+    border-radius: 4px;
+}
+
+
+footer h2 {
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: #FFA5A5;
+    margin: 3%;
+}
+
+footer a {
+    margin: 3%;
+    width: 40%;
+}
+
+
+footer {
+    margin-top: 1em; /* 16px / 16 px*/
+    background-color: #FFA5A5;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #fff;
+    overflow: hidden;
+    text-align: left;
+    font-size: 1em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+footer img {
+    max-width: 50%; /* Fluid images! For IE6 support, create a separate IE6 */
+    height: auto;
+}
+
+
+
+
+
+a {
+    color: #0C005A;
+    text-decoration: none;
+}
+
+
+figure {
+    text-align: center;
+}
+
+
+#wrapper {
+    width: 100%; /* 1140px / 1200 px */
+    margin: 0px auto;
+}

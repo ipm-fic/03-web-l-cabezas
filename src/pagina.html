@@ -4,86 +4,59 @@
       <meta charset="UTF-8">
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>PokéPage</title>
+
+      <title>PokéPage - Pequeña y simple pokedex </title>
 
       <link href='https://fonts.google.com/specimen/Source+Sans+Pro' rel='stylesheet' type='text/css'>
-      <link rel="stylesheet" type="text/css" href="responsive.css">
+      <link rel="stylesheet" type="text/css" href="page-default.css">
 
    </head>
+
    <body>
       <div id="wrapper" class="container">
          <header>
-            <nav> <!--class="grey darken-3">-->
+            <nav>
                <div class="nav-wrapper">
-                  <!--<a> PokéInfo </a>-->
-                  <img src="img/pikachu.png">
+                  <img src="img/pikachu.png" alt="PokéInfo">
                   <ul id="nav-mobile" class="right hide-on-med-and-down">
-
                   </ul>
                </div>
             </nav>
          </header>
          <main>
             <section>
-              <img src="img/header.png">
+              <img src="img/header.png" alt="Pokémon: gotta catch'em all ">
                <h1 class="light-green-text text-darken-2">
                   La expansión de los pokémon es cada vez más notoria, por eso y para ayudar
                   a controlar toda la información disponible sobre ellos, hemos desarrollado esta aplicación
                   que permita consultar el catálogo de pokémons existente.
                </h1>
-
-
             </section>
+
             <section id="zone1">
-               <h3 class="light-green-text text-darken-2"> Pon en el buscador el nombre o número de un Pokémon!</h3>
+               <h2 class="light-green-text text-darken-2"> Pon en el buscador el nombre o número de un Pokémon!</h2>
                <!-- app search page-->
                <div data-role="page" id="pokeSearch-page">
                   <div data-role="main" class="ui-content">
-                     <form id="pokeForm" action="#pokeDetails-page" method="post">
+                     <form id="pokeForm" name="formulario" action="#pokeDetails-page" method="post">
                         <div>
-                           <form>
-                              <input type="text" name="pokeInput" id="pokeInput" placeholder="Buscar Pokémon" />
-                              <input type="submit" value="Search" />
-                           </form>
+                              <input type="text" name="pokeInput" id="pokeInput" placeholder="ej: Charmander o 24 *" />
+                              <input type="submit" name="submit" id="buscar" value="Buscar" />
+                              <br>
+                           <br>
                            <div class="pokemon-container"></div>
-
                            <script src="getData.js"></script>
-
-
                         </div>
                         <br>
                      </form>
-                     <div>
-                        <!--<ul data-role="listview" data-inset="true" id="pokeDetails" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">
--->
-                        </ul>
-                     </div>
                   </div>
                </div>
-
-
-
-
             </section>
-
-
-
-
          </main>
          <footer>
             <h2>Página hecha gracias a :</h2>
-               <a href="https://pokeapi.co/" > <img src="img/pokeapi.png"></a>
+               <a href="https://pokeapi.co/" > <img src="img/pokeapi.png" alt="PokéApi"></a>
          </footer>
-
-         <script type="text/javascript">
-
-            document.addEventListener("deviceready", onDeviceReady, true);
-
-            function onDeviceReady() {
-
-            }
-         </script>
-
 
       </div>
    </body>
