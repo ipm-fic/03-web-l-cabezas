@@ -3,6 +3,7 @@
 const pokemonContainer = document.querySelector(".pokemon-container");
 const formEl = document.querySelector("form");
 const inputEl = document.querySelector("input[type=text]");
+const button = document.getElementById("buscar");
 
 console.log(inputEl);
 
@@ -18,17 +19,7 @@ formEl.addEventListener("submit", (e) => {
 // define our functions/actions ------------
 async function getPokemon() {
     var param = document.getElementById("pokeInput").value.toLowerCase();
-    /*var n = document.formulario.submit;*/
     name=param
-/*    if (n == true && name==""){ const pokemonEl = document.createElement("div");
-        pokemonEl.classList.add("pokemon");
-        pokemonEl.innerHTML = `
-        <div class="error">
-            <h2> Por favor introduce un Pokémon o un número </h2>
-            <img src="img/no.gif" style="align-self: center" width="500" alt="Pikachu diciendo no no ">        
-        </div>`
-        pokemonContainer.appendChild(pokemonEl);
-        return}*/
     const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
     if(!res.ok){
         const pokemonEl = document.createElement("div");
@@ -53,26 +44,36 @@ async function getPokemon() {
     <div class="info">
       <img src="https://pokeres.bastionbot.org/images/pokemon/${
         pokemon.id
-    }.png" alt="No foto, pokémon demasiado reciente" width=100%>
+    }.png"  style="height: 200px; width:200px;" alt="No foto, pokémon demasiado reciente" >
       <br>
-    <h2>${pokemon.name}</h2>
+    <h2 style="font-size: 40px">${pokemon.name}</h2>
     </div>
 
-    <div class="stats" style="font-size: 2.5vw" >
+    <div class="stats" style="font-size: 20px" >
       ${pokemon.stats
         .map((stat) => {
             return `<p >${stat.stat.name}: ${stat.base_stat}</p>`;
         })
         .join("")}
     </div>
+    
+     <div class="type"  style="font-size: 20px">
+    ${pokemon.types
+        .map((type) => {
+            return `<p>type: ${type.type.name}</p>`;
+        })
+        .join("")}
+    <div> 
 
-    <div class="abilities" style="padding-bottom: -2% " style="font-size: 2.5vw">
+    <div class="abilities"  style="font-size: 20px">
     ${pokemon.abilities
         .map((ability) => {
             return `<p> ability: ${ability.ability.name}</p>`;
         })
         .join("")}
     <div>  
+    
+     
     
   `;
 
