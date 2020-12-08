@@ -44,7 +44,7 @@ async function getPokemon() {
     <div class="info">
       <img src="https://pokeres.bastionbot.org/images/pokemon/${
         pokemon.id
-    }.png"  style="height: 200px; width:200px;" alt="No foto, pokémon demasiado reciente" >
+    }.png"  style="height: 200px; width:200px;" alt="Foto del pokémon" >
       <br>
     <h2 style="font-size: 40px">${pokemon.name}</h2>
     </div>

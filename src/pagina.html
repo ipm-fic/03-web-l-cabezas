@@ -26,7 +26,7 @@
          <main>
             <section>
               <img src="img/header.png" alt="Pokémon: gotta catch'em all ">
-               <h1 class="light-green-text text-darken-2">
+               <h1 class="introduccion">
                   La expansión de los pokémon es cada vez más notoria, por eso y para ayudar
                   a controlar toda la información disponible sobre ellos, hemos desarrollado esta aplicación
                   que permita consultar el catálogo de pokémons existente.
@@ -34,12 +34,12 @@
             </section>
 
             <section id="zone1">
-               <h2 class="light-green-text text-darken-2"> Pon en el buscador el nombre o número de un Pokémon!</h2>
+               <h2> <label for="pokeInput">Pon en el buscador el nombre o número de un Pokémon!</label> </h2>
                <!-- app search page-->
                <div data-role="page" id="pokeSearch-page">
                   <div data-role="main" class="ui-content">
                      <form id="pokeForm" name="formulario" action="#pokeDetails-page" method="post">
-                        <div>
+                        <div class="busqueda">
                               <input type="text" name="pokeInput" id="pokeInput" placeholder="ej: Charmander o 24 *" required />
                               <button type="submit" class="botonForm" id="buscar" form="pokeForm" value="Buscar">Buscar</button>
                               <br>
@@ -54,8 +54,9 @@
             </section>
          </main>
          <footer>
-            <h2>Página hecha gracias a :</h2>
+            <h3 class="piePagina">Página hecha gracias a :</h3>
                <a href="https://pokeapi.co/" > <img src="img/pokeapi.png" alt="PokéApi"></a>
+            <h4><span class="fin">Hecho por Laura Cabezas y Lorena Mariño</span></h4>
          </footer>
 
       </div>
