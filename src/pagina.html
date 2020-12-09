@@ -8,7 +8,8 @@
       <title>PokéPage - Pequeña y simple pokedex </title>
 
       <link href='https://fonts.google.com/specimen/Source+Sans+Pro' rel='stylesheet' type='text/css'>
-      <link rel="stylesheet" type="text/css" href="page-default.css">
+      <link rel="stylesheet" type="text/css" href="css/page-default.css">
+      <link href="css/page-desktop.css" rel="stylesheet" media="only screen and (min-width: 1200px)">
 
    </head>
 
@@ -17,7 +18,7 @@
          <header>
             <nav>
                <div class="nav-wrapper">
-                  <img src="img/pikachu.png" alt="PokéInfo">
+                  <img src="img/pikachu.png" alt="PokéInfo" class="pequePika">
                   <ul id="nav-mobile" class="right hide-on-med-and-down">
                   </ul>
                </div>
@@ -25,7 +26,7 @@
          </header>
          <main>
             <section>
-              <img src="img/header.png" alt="Pokémon: gotta catch'em all ">
+              <img src="img/header.png" alt="Pokémon: gotta catch'em all " class="gottaCatch">
                <h1 class="introduccion">
                   La expansión de los pokémon es cada vez más notoria, por eso y para ayudar
                   a controlar toda la información disponible sobre ellos, hemos desarrollado esta aplicación
@@ -40,7 +41,7 @@
                   <div data-role="main" class="ui-content">
                      <form id="pokeForm" name="formulario" action="#pokeDetails-page" method="post">
                         <div class="busqueda">
-                              <input type="text" name="pokeInput" id="pokeInput" placeholder="ej: Charmander o 24 *" required />
+                              <input type="text" class="pokeInput" name="pokeInput" id="pokeInput" placeholder="ej: Charmander o 24 *" required />
                               <button type="submit" class="botonForm" id="buscar" form="pokeForm" value="Buscar">Buscar</button>
                               <br>
                            <br>
@@ -55,7 +56,7 @@
          </main>
          <footer>
             <h3 class="piePagina">Página hecha gracias a :</h3>
-               <a href="https://pokeapi.co/" > <img src="img/pokeapi.png" alt="PokéApi"></a>
+               <a href="https://pokeapi.co/" class="enlacePie" > <img src="img/pokeapi.png" alt="PokéApi"></a>
             <h4><span class="fin">Hecho por Laura Cabezas y Lorena Mariño</span></h4>
          </footer>
 
