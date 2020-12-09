@@ -1,0 +1,14 @@
+header div.title {
+    background-color: #3D7EA6;
+}
+
+section#zone2 {
+    display: grid;
+    grid-template-columns: 48% 48%;
+    grid-gap: 4%;
+}
+
+footer form {
+    width: 70%;
+    margin: 0 auto;
+}
