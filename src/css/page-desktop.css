@@ -8,6 +8,12 @@ nav {
     overflow: hidden;
     justify-content: space-between;
     display: block;
+    background-image: url("../img/pokedeex.png");
+    background-size: 60px;
+    background-repeat: no-repeat;
+    background-position:  12px center;
+
+
 }
 
 body {
@@ -22,8 +28,8 @@ body {
 .pequePika {
     max-width: 5%;
     position: relative;
-    left: 50%;
-    transform: translatex(-50%);
+    height: 30px; width: 30px;
+    left: 180%;
 }
 
 .gottaCatch{
@@ -85,6 +91,7 @@ body {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 15px;
     text-align: center;
+    align-self: center;
     padding-top: 0.5%;
 }
 
@@ -143,17 +150,31 @@ footer{
     font-size: 1em;
     position: relative;
     bottom: 0;
-    width: 100%;
+    /*width: 1600px;*/
+    width: auto;
+    height: 100px;
+    background-image: url("../img/bye.png");
+    background-size: 100px;
+    background-repeat: no-repeat;
+    background-position: center right;
+
 }
 
 footer img {
-    max-width: 50%; /* Fluid images! For IE6 support, create a separate IE6 */
-    height: auto;
+   /* max-width: 50%; !* Fluid images! For IE6 support, create a separate IE6 *!*/
+    width: 80px; height: 50px;
+    position: relative;
+    left: 12%;
+    bottom: 80%;
+
 
 }
 
 .fin{
     background-color: #5C969E ;
+    position: relative;
+    bottom: 160px;
+    right: 80px;
 }
 
 a {
