@@ -1,9 +1,7 @@
-
 // grab the things we need ----------
 const pokemonContainer = document.querySelector(".pokemon-container");
 const formEl = document.querySelector("form");
 const inputEl = document.querySelector("input[type=text]");
-const button = document.getElementById("buscar");
 
 console.log(inputEl);
 
@@ -14,27 +12,21 @@ formEl.addEventListener("submit", (e) => {
     getPokemon(inputEl.value);
 });
 
-function handleError(){
-    const pokemonEl = document.createElement("div");
-    pokemonEl.classList.add("pokemon");
-    pokemonEl.innerHTML = `
-        <div class="error">
-            <h2> Sin conexión o servidor caído </h2>
-            <img src="img/charmanderAgotado.gif" style="align-self: center" width="500" alt="Pokémon Squirtle llorando ">        
-        </div>`
-    pokemonContainer.appendChild(pokemonEl);
-    return
-}
-
-
-
 // define our functions/actions ------------
 async function getPokemon() {
     var param = document.getElementById("pokeInput").value.toLowerCase();
-    name=param
-    const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`).catch(handleError)
+    name = param
+    const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`).then(
+        res => {
+            return res;
+        }
+    ).catch(
+        error => {
+            handleErrorServer()
+        }
+    )
 
-    if(!res.ok){
+    if (!res.ok) {
         const pokemonEl = document.createElement("div");
         pokemonEl.classList.add("pokemon");
         pokemonEl.innerHTML = `
@@ -57,7 +49,7 @@ async function getPokemon() {
     <div class="info">
       <img src="https://pokeres.bastionbot.org/images/pokemon/${
         pokemon.id
-    }.png"  style="height: 200px; width:200px;" alt="Foto del pokémon" >
+    }.png"  style="height: 200px;width:200px;" alt="Foto del pokémon" >
       <br>
     <h2 style="font-size: 40px">${pokemon.name}</h2>
     </div>
@@ -89,12 +81,24 @@ async function getPokemon() {
      
     
   `;
-
     pokemonContainer.appendChild(pokemonEl);
 }
 
+function handleErrorServer() {
+    const pokemonEl = document.createElement("div");
+    pokemonEl.classList.add("pokemon");
+    pokemonEl.innerHTML = `
+        <div class="error">
+            <h2> Sin conexión o servidor caído </h2>
+            <img src="img/charmanderAgotado.gif" style="align-self: center" width="500" alt="Pokémon Squirtle llorando ">        
+        </div>`
+    pokemonContainer.appendChild(pokemonEl);
+    return
+
+}
+
 // run things ----------------
-getPokemon();
+/*getPokemon();*/
 
 
 
