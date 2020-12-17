@@ -14,13 +14,26 @@ formEl.addEventListener("submit", (e) => {
     getPokemon(inputEl.value);
 });
 
+function handleError(){
+    const pokemonEl = document.createElement("div");
+    pokemonEl.classList.add("pokemon");
+    pokemonEl.innerHTML = `
+        <div class="error">
+            <h2> Sin conexión o servidor caído </h2>
+            <img src="img/charmanderAgotado.gif" style="align-self: center" width="500" alt="Pokémon Squirtle llorando ">        
+        </div>`
+    pokemonContainer.appendChild(pokemonEl);
+    return
+}
+
 
 
 // define our functions/actions ------------
 async function getPokemon() {
     var param = document.getElementById("pokeInput").value.toLowerCase();
     name=param
-    const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
+    const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`).catch(handleError)
+
     if(!res.ok){
         const pokemonEl = document.createElement("div");
         pokemonEl.classList.add("pokemon");
